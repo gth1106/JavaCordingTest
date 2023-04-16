@@ -1,0 +1,38 @@
+<script>
+    String scissors = "가위";
+		String rock = "바위";
+		String paper = "보";
+		
+		String th = "none";
+		String ms = "none";
+		
+		if (anna == 0) {
+			annaDecision = scissors;
+		} else if (anna == 1) {
+			annaDecision = rock;
+		} else {
+			annaDecision = paper;
+		}
+		
+		if (elsa == 0) {
+			elsaDecision = scissors;
+		} else if (elsa == 1) {
+			elsaDecision = rock;
+		} else {
+			elsaDecision = paper;
+		}
+		
+		System.out.print("태현 " + annaDecision + "을(를) 냈고 ");
+		System.out.print("엘사는 " + elsaDecision + "을(를) 내서 ");
+				
+		if (anna == elsa) {
+			System.out.println("안나와 엘사는 비겼습니다.");
+		} else if (anna - elsa == 1) {
+			System.out.println("안나가 이겼습니다.");
+		} else if (anna - elsa == -2) {
+			System.out.println("안나가 이겼습니다.");
+		} else {
+			System.out.println("엘사가 이겼습니다.");
+		}
+		
+</script>
