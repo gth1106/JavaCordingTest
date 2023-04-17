@@ -1,0 +1,34 @@
+<script>
+    var x = [1, 2, 3];
+    var y = [4, 5, 6];
+    var joined = x.concat(y);
+
+    document.writeln(x);     // 출력: 1,2,3
+    document.writeln(joined); // 출력: 1,2,3,4,5,6
+</script>
+
+<script>
+    var numbers = [1, 2, 3, 4, 5];
+
+    numbers.push(6);
+    document.writeln(numbers+'<BR>');         
+    item = numbers.pop();
+    document.writeln(numbers+'<BR>');         
+</script>
+
+<script>
+    var fruits = ["apple","banana","grape"];
+    document.writeln(fruits.indexOf("banana"));      // 출력: 1
+</script>
+
+<script>
+    var myArray = [10,7,23,99,169,19,11,1];
+    myArray.sort()
+    document.writeln(myArray);
+</script>
+
+<script>
+    var myArray = [10, 7, 23, 99, 169, 19, 11, 1];
+    myArray.sort(function (a, b) { return a - b });
+    document.writeln(myArray);
+</script>
