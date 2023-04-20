@@ -1,0 +1,49 @@
+<!-- <script>
+    var fruits=Array("Apple","Banana","Orange");
+    
+    for(var i=0;i<fruits.length;i++){
+        document.write(fruits[i]+"</br>");
+    }
+</script> -->
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>연관배열</title>
+    </head>
+    <body>
+        <form name="myform">
+            필드1<input type="text" id="a0"></br> 
+            필드2<input type="text" id="a1"></br>
+            필드3<input type="text" id="a2"></br>
+            <input type="button" value="초기화" onclick="abc()">
+        </form>
+        <script>
+            function abc(){
+                for(var i=0;i<3;i++){
+                    document.myform["a"+i].value=i;
+                }
+            }
+
+        </script>
+    </body>
+</html>
+<!--
+    ! document.myform["a"+i]는 
+    myform의 a0, a1, a2와 같은 id를 가진 input 요소를 나타냅니다. 
+    for 반복문을 사용하여 i값을 변경하면서 
+    document.myform["a"+i].value에 i값을 할당함으로써 
+    각각의 input 요소의 값이 변경되는 것입니다.
+
+   - document.myform["a"+i] 에서의 대괄호 표현 -
+    document.myform["a"+i]는 객체의 속성(property) 중 
+    하나로,
+     이 경우에는 myform 객체 내에 있는 a0, a1, a2와 같은 
+     id를 가진 input 요소를 선택하는 것이다
+
+      대괄호 [] 를 사용하는 이유는 myform 객체의 속성 이름을
+       문자열로 표현하기 위해서입니다.
+        이는 배열과 비슷한 문법을 사용하긴 하지만, 
+        정확히 말하면 연관 배열(associative array)이나 
+        객체(object)의 속성을 선택하기 위한 것입니다.
+-->
