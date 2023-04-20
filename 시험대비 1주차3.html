@@ -1,0 +1,14 @@
+<script>
+    var size=parseInt(prompt("몇 개"))
+    var myCar = {};
+    var txt="";
+    for(var i=0;i<size;i++){
+
+        myCar[i]=prompt("정보입력")
+    }
+    for(var x in myCar){
+        txt = txt+myCar[x] + " ";
+    }
+    document.write(txt);
+    
+</script>
