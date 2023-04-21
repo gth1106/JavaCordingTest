@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>구구단표</title>
+    </head>
+    <body>
+        <table border="5">
+            <script>
+            for(let i=2;i<10;i++){
+                document.write("<tr>");
+                for(let j=1;j<10;j++){
+                    document.write("<td>"+j+" x "+i+" = "+j*i+"</td>");
+                }
+                document.write("</tr>")
+            }
+            </script>
+        </table>
+    </body>
+</html> -->
+<!-- // 프로토타입 생성자함수 정의  
+1. 생성할 객체의 속성을 정의 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>프로토타입예제</title>
+    </head>
+    <body>
+        <script>
+            function Point(xpos,ypos){
+                this.x=xpos;
+                this.y=ypos;
+            }
+            Point.prototype.point=function(){
+                return Math.sqrt(this.x * this.x + this.y * this.y);
+            }
+
+            let p1= new Point(10,20);
+            let p2= new Point(20,20);
+            document.write(p1.point()+"</br>");
+            document.write(p2.point());
+
+            
+
+        </script>
+    </body>
+</html>
