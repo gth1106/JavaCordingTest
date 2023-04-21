@@ -1,0 +1,36 @@
+<!-- <script>
+    let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("안녕하세요, 저는 " + this.name + "입니다.");
+        }   
+    };
+
+person.greet(); // "안녕하세요, 저는 John입니다." 출력
+
+</script>  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+
+	<script>
+		function person(name,age){
+			this.name=name;
+			this.age=age;
+		}
+
+		person.prototype.sayHello = function(){
+			console.log("하이"+this.name+"입니다.");
+		}
+
+		let person1=new person("고태현",25);
+		person1.sayHello();
+	</script>
+
+</body>
+</html>
