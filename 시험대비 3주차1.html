@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>신정까지 남은시간</title>
+    </head>
+    <body>
+        <div id="remaining"></div>
+        <script>
+            function datesNewUntilYear(){
+                var now = new Date();
+                var NewYear = new Date("January 1," + (now.getFullYear()+1)) ;
+                var diff= NewYear - now ;
+                
+                let ms = Math.floor(diff%1000);
+                diff = diff/1000 ;
+                let s = Math.floor ( diff % 60 );
+                diff = diff/60;
+                let minute = Math.floor ( diff  % 60);
+                diff = diff /60 ;
+                let hours = Math.floor (diff %24);
+                diff = diff /24 ;
+                let days = Math.floor(diff);
+
+                var outstr = '내년도신정까지'+ days+'일,'+hours+'시간,'+ minute +'분,'+ s+'초 남았습니다.';
+                document.getElementById("remaining").innerHTML = outstr;
+
+                setTimeout("datesNewUntilYear()",1000);
+                
+            }
+            datesNewUntilYear();
+        </script>
+    </body>
+</html>
