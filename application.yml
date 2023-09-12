@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    include: real-db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+    hibernate:
+      ddl-auto: create
+    generate-ddl-auto: true
+    show-sql: true
+  session:
+    store-type: jdbc
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ls-4d555c2a55a7953452f49b206c9171011e012b4a.cvbggnbz9dyk.ap-northeast-2.rds.amazonaws.com:5000/dbiron_dev?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: taehyun
+    password: wpdbrdhkd1!
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+server:
+  port: 5000
