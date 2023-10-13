@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="jquery-5.7.1.js"></script>
+</head>
+    <script>
+   // 이벤트 메서드에 대한 JQuery 구문
+   // 버튼 위로 마우스 클릭
+   
+   // 아래 스크립트는 수정하지 말고, body에 속하는 태그만 수정하여
+   // 마우스로 클릭했을 때 다시 보이게 하세요.
+   $(document).ready(function(){
+     $("#disappear").hide();
+	 $(".test").hide();
+	 $("#test1").hide();
+	 $("p").hide();
+     $("button").click(function(){ $("#disappear").show(); 
+									$(".test").show();
+									$("#test1").show();
+									$("p").show();
+			});
+   });
+   </script>
+<body>
+    <p>JQuery 사라진다-1</p>
+    <div class="test">JQuery 사라진다-2</div>
+    <h1 id="test1">JQuery 사라진다-3</h1>
+    <h3 id="disappear">JQuery 사라진다-4</h3>
+    <button>클릭하세요 사라진 요소가 보입니까?</button>
+</body>
+</html>

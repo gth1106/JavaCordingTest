@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>hide</title>
+  <script src="jquery-5.7.1.js"></script>
+
+ </head>
+     <script>
+	//이벤트 메서드에 대한 JQuery 구문
+	// 요소 위로 마우스 클릭
+
+	$(document).ready(function(){
+	  $("p").click(function(){ $("p").hide(); });
+
+	});
+	</script>
+
+ <body>
+	<p>JQuery 사라진다-1</p>
+    <div class="test">JQuery 사라진다-2</div>
+    <h1 id="test">JQuery 사라진다-3</h1>
+
+ </body>
+</html>

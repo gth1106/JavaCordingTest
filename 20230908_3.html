@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="Generator" content="textEdit">
+   <meta name="Author" content="고태현">
+   <meta name="Keywords" content="jquery-01, jquery-구독">
+   <meta name="Description" content="2023-09-08">
+
+        <title>JQuery-A자료들</title>
+        <!-- 바로 내용이 이미지 색상 관련 플러그 및 각종 JQuery라이브러리 -->
+        <link rel="stylesheet" type="text/css" href="image-picker.css">
+        <script src="jquery-5.7.1.js"></script>
+        <script src="image-picker.js"></script>
+
+ <script>
+            $(document).ready(function() {
+                $("div").hover(function() {
+                    $(this).css("color","#E0D");},
+                        function(){
+                            $(this).css("color","black");} );
+                $("div").hover(function() {
+                    $(this).animate( {fontSize: "21px"}, 500);},
+                        function() {
+                            $(this).animate( {fontSize: '1em'}, 200);} );
+                $("div.attr").click(function() {
+                    window.open("http://www.rskv.co.kr/7_db/7_k28/7_k28.jpg", "_blank"); });
+                $("div.href").click(function() {
+                    window.open("http://www.rskv.co.kr/7_db/7_k28/7_k28.png", "_blank"); });
+                $("div.sour").click(function() {
+                    window.open("http://www.rskv.co.kr/7_DB/7_k28/main_7_k.htm", "_blank"); });
+            });
+            </script>
+    </head>
+    <body>
+        <hr>
+        <h3>h로 시작되는 메소드 및 함수</h3>
+        <div class="attr">[01] 내 사진</div>
+        <div class="href">[02] 성명</div>
+        <div class="sour">[03] 개인홈페이지</div>
+   </body>
+</html>

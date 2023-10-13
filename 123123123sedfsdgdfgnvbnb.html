@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="textEdit">
+  <meta name="Author" content="고태현">
+  <meta name="Keywords" content="jquery-01, jquery-구독">
+  <meta name="Description" content="2023-10-06">
+  
+  <title>JQuery-10-06-2</title>
+  <!--  바로 내용이 이미지색상관련 플러그및 각종 JQuery 라이브러리 -->
+  <link rel="stylesheet" type="text/css" href="http://www.rskv.co.kr/JQuery/image-picker.css">
+  <script src="http://www.rskv.co.kr/JQuery/jquery-3.7.1.js"></script><!-- 서버쪽에서 확인 및 실행시에 반드시 패스설정 하세요 -->
+  <script src="http://www.rskv.co.kr/JQuery/image-picker.js"></script>
+
+  <style>
+    .img-size-1 .image_picker_image {
+      width: 70px;
+      height: 70px;
+  }
+
+    .img-size-2 .image_picker_image {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .img-size-3 .image_picker_image {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .img-size-4 .image_picker_image {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .img-size-5 .image_picker_image {
+        max-width: 50px;
+        max-height: 50px;
+    }
+</style>
+
+
+<script>
+  $(document).ready(function(){
+  $("select").children(".five").css({'color': 'red', 'background-color': 'yellow'});
+
+  $("select").change(function(){
+      var v_slide = $(this).children("option:selected").val();
+
+      // 첫 번째 아이콘의 선택 값이 1이므로, 이 값을 기반으로 점수를 조정
+      if(Number(v_slide) === 1) {
+          $("h3").text("나의 능력은 99점");
+      } else {
+          v_slide = Number(v_slide) + 90;
+          $("h3").text("나의 능력은 " + v_slide + "점");
+      }
+
+      //var slide = Number(v_slide);
+         // 선택한 옵션 값 가져오기
+  //        var slide = $("option:selected").val();
+  //        if(Number(slide) == 3) {
+  //           // 새로운 윈도우 창 열리고 크기(800 ×600) 조절됨
+  //           window.open("http://www.rskv.co.kr/school/", "_blank", "width=1024, height=768");  }
+  //        else if(Number(slide) == 5) {
+  //           // 새로운 윈도우 창 열리고 크기(800 ×600) 조절됨
+  //           window.open("http://www.rskv.co.kr/7_db/7_y05/main_7_y.htm", "_blank", "width=1024, height=768");  }
+  //        else if(Number(slide) == 1) {
+  //           // 새로운 윈도우 창 열리고 크기(800 ×600) 조절됨
+  //           window.open("http://www.rskv.co.kr/7_db/7_k28/main_7_k.htm", "_blank", "width=1024, height=768");  }
+  //     });
+
+  //  });
+  var slide = $("option:selected").val();
+           switch(Number(slide)){
+            case 1 :
+            
+              window.open("http://www.rskv.co.kr/7_db/7_k28/7_k28.jpg", "_blank", "width=1024, height=768" );
+              // 새창이 열리고 1024x 768 사이즈로 열림
+              break;
+            case 2:
+              window.open("http://www.rskv.co.kr/7_db/7_k27/7_k27.jpg", "_blank", "width=1024, height=768" );
+              break;
+            case 3:
+              window.open("http://www.rskv.co.kr/7_db/7_k29/7_k29.jpg", "_blank", "width=1024, height=768" );
+              break;
+            case 4:
+              window.open("http://www.rskv.co.kr/7_db/7_k26/7_k26.jpg", "_blank", "width=1024, height=768" );
+              break;
+            case 5:
+              window.open("http://www.rskv.co.kr/7_db/7_k25/7_k25.jpg", "_blank", "width=1024, height=768" );
+              break;
+          }
+        });
+     });
+    </script>
+  
+</head>
+
+<body>
+      <hr>
+      <select class='image-picker'>
+        <option value=""></option>
+        <option class="img-size-1" data-img-src='http://www.rskv.co.kr/7_db/7_k28/JQuery/icon/1.png' value=1 > Page 1 </option>
+        <option class="img-size-2" data-img-src='http://www.rskv.co.kr/7_db/7_k28/JQuery/icon/2.png' value=2 > Page 2 </option>
+        <option class="img-size-3" data-img-src='http://www.rskv.co.kr/7_db/7_k28/JQuery/icon/3.png' value=3 > Page 3 </option>
+        <option class="img-size-4" data-img-src='http://www.rskv.co.kr/7_db/7_k28/JQuery/icon/4.png' value=4 > Page 4 </option>
+        <option class="img-size-5 five" data-img-src='http://www.rskv.co.kr/7_db/7_k28/JQuery/icon/5.png' value=5 > Page 5 </option>
+      </select>
+    
+      <h3></h3>
+
+  <script>
+  /*
+  현 스크립트의 위치는 </body>맨 끝 바로 위쪽에 둔다. 
+  즉, image-picker기능을 사용한 select  문구보다 하단에 위치하도록 한다.
+  또한 image-picker.js 파일은 select문구의 이미지 선택에 필요한 플로그인 이므로
+  반드시 선언해 준다.
+  잘 알고 있겠지만, 플로그인은 응용 프로그램에 추가 기능을 추가하는 소프트웨어
+  입니다. 확장정도의 개념!
+  그러나 플로그인이 없이는 사용할 수 없습니다 ^!^
+  */
+    $("select.image-picker").imagepicker({ hide_select:  false  });
+  </script>
+
+</body>
+</html>

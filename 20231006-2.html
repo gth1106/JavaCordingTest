@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" href="font.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HomePage</title>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-5.7.1.js"></script>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                click: function() {
+                    alert("멋진 테이블...!");
+                }
+            }),
+
+        $("#j이곳1").on({
+            mouseenter: function() {
+                $("#j이곳_1").show();
+                $("#j이곳_1").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/20231006/7_k28.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_1").hide();
+            }
+        }),
+            
+        $("#j이곳2").on({
+            mouseenter: function() {
+                $("#j이곳_2").show();
+                $("#j이곳_2").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/J이미지1.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_2").hide();
+            }
+        }),
+
+        
+
+        $("#j이곳3").on({
+            mouseenter: function() {
+                $("#j이곳_3").show();
+                $("#j이곳_3").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/111.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_3").hide();
+            }
+        }),
+        
+
+        $("#j이곳4").on({
+            mouseenter: function() {
+                $("#j이곳_4").show();
+                $("#j이곳_4").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/2.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_4").hide();
+            }
+        }),
+
+        
+
+        $("#j이곳5").on({
+            mouseenter: function() {
+                $("#j이곳_5").show();
+                $("#j이곳_5").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/7_y15.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_5").hide();
+            }
+        }),
+
+        $("#j이곳6").on({
+            mouseenter: function() {
+                $("#j이곳_6").show();
+                $("#j이곳_6").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/7_y14.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_6").hide();
+            }
+        }),
+
+        $("#j이곳7").on({
+            mouseenter: function() {
+                $("#j이곳_7").show();
+                $("#j이곳_7").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/7_y13.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_7").hide();
+            }
+        }),
+
+        $("#j이곳8").on({
+            mouseenter: function() {
+                $("#j이곳_8").show();
+                $("#j이곳_8").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/7_y12.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_8").hide();
+            }
+        }),
+
+        $("#j이곳9").on({
+            mouseenter: function() {
+                $("#j이곳_9").show();
+                $("#j이곳_9").attr("src", "http://www.rskv.co.kr/7_DB/7_k28/7_y19.jpg");
+
+                $('img').attr({width:'150px', height:'auto'});
+            },
+            mouseleave: function() {
+                $("#j이곳_9").hide();
+            }
+        }),
+
+        $("table").css({"color":"blue"});
+        $("table").css({"border":"2.5px solid blue", "border-collapse":"collapse"}); // border-collapse를 함께 사용합니다.
+        // border와 collapse : 셸 사이의 공간을 없애는 것
+
+        $("th,td").css({"border":"1px solid red", "background-color":"yellow", "opacity":"1"});
+
+        $("#j이곳2").css({"background-color":"#D1B2FF"});
+
+
+        $('#open_all').click(function(){
+            $('#j이곳1').trigger('mouseenter');
+            $('#j이곳2').trigger('mouseenter');
+            $('#j이곳3').trigger('mouseenter');
+            $('#j이곳4').trigger('mouseenter');
+            $('#j이곳5').trigger('mouseenter');
+            $('#j이곳6').trigger('mouseenter');
+            $('#j이곳7').trigger('mouseenter');
+            $('#j이곳8').trigger('mouseenter');
+        });
+
+        $('#close_all').click(function(){
+            $('#j이곳1').trigger('mouseleave');
+            $('#j이곳2').trigger('mouseleave');
+            $('#j이곳3').trigger('mouseleave');
+            $('#j이곳4').trigger('mouseleave');
+            $('#j이곳5').trigger('mouseleave');
+            $('#j이곳6').trigger('mouseleave');
+            $('#j이곳7').trigger('mouseleave');
+            $('#j이곳8').trigger('mouseleave');
+        });
+
+        });
+
+    </script>
+</head>
+<body>
+    <p>테이블을 만듭니다</p>
+    <h3></h3>
+    <button id="open_all">사진 모두 열기</button>
+    <button id="close_all">사진 모두 닫기</button>
+    <br/>
+    <!--[테이블 생성 실시]-->
+    <table id="main_table">
+        <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>사진</th>
+        </tr>
+        <tr>
+            <td>2201002</td>
+            <td>고태현</td>
+            <td id="j이곳1"><img id="j이곳_1" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳2"><img id="j이곳_2" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳3"><img id="j이곳_3" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳4"><img id="j이곳_4" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳5"><img id="j이곳_5" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳6"><img id="j이곳_6" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳7"><img id="j이곳_7" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳8"><img id="j이곳_8" />컴퓨터정보계열과</td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td id="j이곳9"><img id="j이곳_9" />컴퓨터정보계열과</td>
+        </tr>        
+    </table>
+</body>
+</html>

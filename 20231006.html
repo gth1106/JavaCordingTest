@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HomePage</title>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-5.7.1.js"></script>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").on ({
+                click: function() {
+                    alert("멋진 테이블...!");
+                } //
+            });
+            
+            $('#j이곳').on({
+                mouseenter : function() {
+                    $('#j이곳2').show();
+                    $("#j이곳2").attr('src','http://www.rskv.co.kr/7_DB/7_k28/20231006/img/7_K28.jpg')
+                    $('img').attr({width: '230', height: '230'});
+                },
+
+                mouseleave: function() {
+                   $('#j이곳2').hide();
+                },
+
+            });
+            $("table").css("color","blue");
+            $("table").css({"border" : "2.5px solid blue",
+                            "border-collapse" : "collapse" 
+            });
+
+            $("th,td").css({"border" : "1px solid red",
+                            "background-color" : "yellow",
+                            "opacity" : "1"
+            });
+            $("#j이곳").css({"background-color" : "#D182FF" 
+
+            });
+        });
+
+        $('#j이곳3').on({
+                mouseenter : function() {
+                    $('#j이곳4').show();
+                    $("#j이곳4").attr('src','http://www.rskv.co.kr/7_DB/7_k29/20231006/img/7_k29.jpg')
+                    $('img').attr({width: '230', height: '230'});
+                },
+
+                mouseleave: function() {
+                   $('#j이곳4').hide();
+                },
+
+            });
+            $("table").css("color","blue");
+            $("table").css({"border" : "2.5px solid blue",
+                            "border-collapse" : "collapse" 
+            });
+
+            $("th,td").css({"border" : "1px solid red",
+                            "background-color" : "yellow",
+                            "opacity" : "1"
+            });
+            $("#j이곳3").css({"background-color" : "#D182FF" 
+
+            });
+    </script>
+</head>
+<body>
+    <p>테이블을 만듭니다.</p>
+    <h3></h3>
+
+    <table id = "main_table">
+        <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>사진</th>
+        </tr>
+        <tr>
+            <td>2201002</td>
+            <td>테스트</td>
+            <td>개인사진</td>
+        </tr>
+        <tr>
+            <td>2201002</td>
+            <td>고태현</td>
+            <td id = "j이곳"><img id = "j이곳2">컴퓨터정보계열</td>
+        </tr>
+        <tr>
+            <td>2001282</td>
+            <td>김근형</td>
+            <td id = "j이곳3"><img id = "j이곳4">컴퓨터정보계열</td>
+        </tr>
+    </table>
+</body>
+</html>

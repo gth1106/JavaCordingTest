@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/JavaScript" src="jquery-5.7.1.js"></script>
+<script>
+function see() {
+    // 모든 콤마를 제거하고 현재 금액 추출
+    let currentMoney = parseInt($("#money").text().replace("한 달 용돈 : ", "").replace(/원|,/g, "").trim());
+    // 250,000원 추가
+    let newMoney = currentMoney + 250000;
+    
+    // 화면에 업데이트된 금액 표시
+    $("#money").html("한 달 용돈 : " + newMoney.toLocaleString() + "원");
+    
+    // 이름과 학교 정보 추가
+    $("#name").append("<b>고태현</b>");
+    $("#school").append("<b>영진전문대학교!</b>");
+	$("grade").append("<b>1학년</b>");
+}
+</script>
+</head>
+
+<body>
+    <p id="money">한 달 용돈 : 250,000원</p>
+    <p id="name">성 명 : </p>
+    <p id="school"></p>
+	<p id="grade"></p>
+    <form>
+       <input type="button" value="부자버튼" onclick="see()" />
+    </form>
+</body>
+</html>

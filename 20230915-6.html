@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/JavaScript" src="jquery-5.7.1.js"></script>
+<script>
+// 이 메소드를 사용하면 기존 요소의 내부에 새로운 요소나 콘텐츠를 추가할 수 있다
+// append() 메소드를 사용하면, 선택된 요소의 마지막에 새로운 요소나 콘텐츠를 추가한다.
+
+	function see() {
+		$("money").append("<b>250,000원 입니다.</b>");
+		$("name").append("<b>홍길동</b>");
+		$("school").append("<b>영진전문대학교!</b>");
+	}
+</script>
+</head>
+
+ <body>
+    <p><money>한 달 용돈 :  </money></p>
+    <p><name>성 명 :  </name></p>
+    <p><school></school></p>
+    <form>
+       <input type="button" value="클릭" onclick="see()" />
+    </form>
+ </body>
+</html>

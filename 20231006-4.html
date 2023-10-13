@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" href="font.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HomePage</title>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-5.7.1.js"></script>
+    <script src ="http://www.rskv.co.kr/7_DB/7_k28/20231006/jquery-latest.min.js"></script>
+    <style>
+        /* 테이블 기본 스타일 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        /* 테이블 헤더 스타일 */
+        th {
+            background-color: #4CAF50;  /* 헤더 배경색 */
+            color: blac;               /* 헤더 글자색 */
+            padding: 10px;              /* 헤더 내부 여백 */
+        }
+    
+        /* 테이블 데이터 스타일 */
+        td {
+            padding: 10px;
+        }
+    
+        /* 테이블 행에 마우스를 올리면 배경색 변경 */
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    
+        /* 테이블 테두리 스타일 */
+        table, th, td {
+            border: 1px solid #dddddd;
+        }
+    
+        /* 이미지 초기 숨김 */
+        img {
+            display: none;
+        }
+    
+        /* 버튼 스타일 */
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;   /* 버튼 배경색 */
+            color: #fff;                 /* 버튼 글자색 */
+            border: none;
+            border-radius: 5px;          /* 버튼 모서리 둥글게 */
+            cursor: pointer;             /* 마우스 포인터 변경 */
+        }
+    
+        /* 버튼에 마우스를 올리면 배경색 변경 */
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    
+    <script>
+    $(document).ready(function() {
+    // 이미지 번호 배열
+    let imageNumbers = [
+        '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
+        '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+        '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'
+    ];
+
+    // 클릭 이벤트 설정
+    $("p").on("click", function() {
+        alert("멋진 테이블...!");
+    });
+
+    // 각 이미지 번호에 대한 이벤트 설정
+    for(let i = 0; i < imageNumbers.length; i++) {
+    $("#j이곳" + imageNumbers[i]).on({
+        mouseenter: function() {
+            let imageUrl = "http://www.rskv.co.kr/7_DB/7_K" + imageNumbers[i] + "/7_K" + imageNumbers[i] + ".jpg";
+            imageUrl = imageUrl.replace(/K/g, 'k');
+
+            $("#j이곳_" + imageNumbers[i]).show();
+            $("#j이곳_" + imageNumbers[i]).attr("src", imageUrl);
+            $('img').attr({width:'150px', height:'auto'});
+        },
+        mouseleave: function() {
+            $("#j이곳_" + imageNumbers[i]).hide();
+        }
+    });
+}   
+
+    
+
+    // 모든 이미지 보이기 버튼 클릭 이벤트
+    $('#open_all').click(function() {
+        for(let i = 0; i < imageNumbers.length; i++) {
+            $('#j이곳' + imageNumbers[i]).trigger('mouseenter');
+        }
+    });
+
+    // 모든 이미지 숨기기 버튼 클릭 이벤트
+    $('#close_all').click(function() {
+        for(let i = 0; i < imageNumbers.length; i++) {
+            $('#j이곳' + imageNumbers[i]).trigger('mouseleave');
+        }
+    });
+});
+
+
+        $("table").css({"color":"blue"});
+        $("table").css({"border":"2.5px solid blue", "border-collapse":"collapse"}); // border-collapse를 함께 사용합니다.
+        // border와 collapse : 셸 사이의 공간을 없애는 것
+
+        $("th,td").css({"border":"1px solid red", "background-color":"yellow", "opacity":"1"});
+
+        $("#j이곳2").css({"background-color":"#D1B2FF"});
+
+
+        $('#open_all').click(function() {
+            for(let i = 0; i < imageNumbers.length; i++) {
+                $('#j이곳' + imageNumbers[i]).trigger('mouseenter');
+            }
+        });
+
+        $('#close_all').click(function() {
+            for(let i = 0; i < imageNumbers.length; i++) {
+                $('#j이곳' + imageNumbers[i]).trigger('mouseleave');
+            }
+        });
+
+        
+
+    </script>
+</head>
+<body>
+    <p>테이블을 만듭니다</p>
+    <h3></h3>
+    <button id="open_all">사진 모두 열기</button>
+    <button id="close_all">사진 모두 닫기</button>
+    <br/>
+    <!--[테이블 생성 실시]-->
+    <table id="main_table">
+        <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>사진</th>
+        </tr>
+        <tr>
+            <td>2201002</td>
+            <td>고태현</td>
+            <td id="j이곳1"><img id="j이곳_1" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>1801126</td>
+            <td>서윤환</td>
+            <td id="j이곳2"><img id="j이곳_2" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001485</td>
+            <td>이지헌</td>
+            <td id="j이곳3"><img id="j이곳_3" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201113</td>
+            <td>홍찬민</td>
+            <td id="j이곳4"><img id="j이곳_4" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001442</td>
+            <td>유희찬</td>
+            <td id="j이곳5"><img id="j이곳_5" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201033</td>
+            <td>박세민</td>
+            <td id="j이곳6"><img id="j이곳_6" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001397</td>
+            <td>배인호</td>
+            <td id="j이곳7"><img id="j이곳_7" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201027</td>
+            <td>김차현</td>
+            <td id="j이곳8"><img id="j이곳_8" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001541</td>
+            <td>최재훈</td>
+            <td id="j이곳9"><img id="j이곳_9" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201129</td>
+            <td>정성엽</td>
+            <td id="j이곳10"><img id="j이곳_10" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201126</td>
+            <td>무하밧</td>
+            <td id="j이곳11"><img id="j이곳_11" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201058</td>
+            <td>윤주한</td>
+            <td id="j이곳12"><img id="j이곳_12" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201023</td>
+            <td>김종인</td>
+            <td id="j이곳13"><img id="j이곳_13" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201047</td>
+            <td>서현도</td>
+            <td id="j이곳14"><img id="j이곳_14" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201127</td>
+            <td>송준석</td>
+            <td id="j이곳15"><img id="j이곳_15" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001273</td>
+            <td>권정무</td>
+            <td id="j이곳16"><img id="j이곳_16" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001572</td>
+            <td>손준호</td>
+            <td id="j이곳17"><img id="j이곳_17" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2301117</td>
+            <td>배현민</td>
+            <td id="j이곳18"><img id="j이곳_18" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201091</td>
+            <td>조영진</td>
+            <td id="j이곳19"><img id="j이곳_19" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>1901233</td>
+            <td>이진우</td>
+            <td id="j이곳20"><img id="j이곳_20" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201068</td>
+            <td>오주헌</td>
+            <td id="j이곳21"><img id="j이곳_21" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001446</td>
+            <td>윤준호</td>
+            <td id="j이곳22"><img id="j이곳_22" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>1901286</td>
+            <td>최민석</td>
+            <td id="j이곳23"><img id="j이곳_23" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>1801326</td>
+            <td>임진혁</td>
+            <td id="j이곳24"><img id="j이곳_24" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201059</td>
+            <td>이가영</td>
+            <td id="j이곳25"><img id="j이곳_25" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2201046</td>
+            <td>서종호</td>
+            <td id="j이곳26"><img id="j이곳_26" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001296</td>
+            <td>김민재</td>
+            <td id="j이곳27"><img id="j이곳_27" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>1901137</td>
+            <td>백문선</td>
+            <td id="j이곳28"><img id="j이곳_28" />컴퓨터정보계열과</td>
+        </tr>
+        <tr>
+            <td>2001282</td>
+            <td>김근형</td>
+            <td id="j이곳29"><img id="j이곳_29" />컴퓨터정보계열과</td>
+        </tr>            
+        <tr>
+            <td>2201421</td>
+            <td>천위쉬안</td>
+            <td id="j이곳30"><img id="j이곳_30" />컴퓨터정보계열과</td>
+        </tr>
+        
+        <tr>
+            <td>2101306</td>
+            <td>량자제</td>
+            <td id="j이곳31"><img id="j이곳_31" />컴퓨터정보계열과</td>
+        </tr>
+    </table>
+</body>
+</html>

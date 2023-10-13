@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+ <head>
+  <meta charset="UTF-8"> <!-- html 파일의 인코딩을 알려주는 테그 -->
+  <meta name="Generator" content="EditPlus"> <!-- 제작도구 -->
+  <meta name="Author" content=“고태현"> <!-- 문서 저자의 이름 -->
+  <meta name="Keywords" content="JQuery, html, append"> <!-- 문서에 대한 키워드 -->
+  <meta name="Description" content="2023-09-15"> <!-- 문서에 대한 설명 -->
+
+<title>JQuery</title>
+<script src="jquery-5.7.1.js"></script>
+<script>
+// W3c Markup 검사서비스를 통과한 html 입니다
+// 이 메소드를 사용하면 기존 요소의 내부에 새로운 요소나 콘텐츠를 추가할 수 있다
+// append() 메소드를 사용하면, 선택된 요소의 마지막에 새로운 요소나 콘텐츠를 추가한다.
+
+	function see() { 
+		$("myname").prepend("<b>저의 이름은 고태현</b>"); 	
+	}
+	
+</script>
+</head>
+
+ <body>
+ 
+     <p><myname>입니다</myname> </p>
+     <input type="button" value="클릭" onclick="see()" />
+   
+ </body>
+</html>

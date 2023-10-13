@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta charset="UTF-8"> <!-- html 파일의 인코딩을 알려주는 테그 -->
+    <meta name="Generator" content="EditPlus"> <!-- 제작도구 -->
+    <meta name="Author" content="송다희"> <!-- 문서 저자의 이름 -->
+    <meta name="Keywords" content="JQuery, html, append"> <!-- 문서에 대한 키워드 -->
+    <meta name="Description" content="2023-09-15"> <!-- 문서에 대한 설명 -->
+
+    <title>JQuery</title>
+    <script src="jquery-5.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").on({
+                click: function () {
+                    $("div").css("color", "blue");
+                    $("div").css({
+                        "background-color": "#ffff00",      // 16진수 yellow
+                        "font-weight": "900",
+                        "font-family": "D2Coding",
+                        "font-size": "180%"
+                    });
+                }
+            })
+        })
+    </script>
+
+<body>
+    <p>글 색상 바꾸기</p>
+    <div>홍 길 동 0 o O 1 i l b B 8 9 q d D</div>
+    <p>
+        <button>이곳을 클릭 하세요</button>
+</body>
+</head>
+
+</html>

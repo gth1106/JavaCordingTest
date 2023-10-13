@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+ <head>
+  <meta charset="UTF-8"> <!-- html 파일의 인코딩을 알려주는 테그 -->
+  <meta name="Generator" content="EditPlus"> <!-- 제작도구 -->
+  <meta name="Author" content="홍길동"> <!-- 문서 저자의 이름 -->
+  <meta name="Keywords" content="JQuery, html, append"> <!-- 문서에 대한 키워드 -->
+  <meta name="Description" content="2023-09-15"> <!-- 문서에 대한 설명 -->
+
+<title>JQuery</title>
+<script src="jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function() {
+        $("p").on({
+            click: function() {
+                alert("멋진 테이블...!");
+            }
+        });
+
+        $("#j이곳").on({
+            mouseenter: function() {
+                alert("완성 멋진 테이블 접근...!");
+            }
+        });
+
+        $("table").css({"color" : "blue",
+                        "border" : "2.5px solid blue",
+                        "border-collapse" : "collapse"});
+        $("th, td").css({"border" : "1px solid red",
+                         "background-color" : "yellow",
+                         "opacity" : "1"});
+        $("#j이곳").css({"background-color" : "#D1B2FF"});
+
+    });
+
+	
+</script>
+</head>
+
+ <body>
+    <p>테이블을 만듭니다</p>
+    <h3></h3>
+    <table id="main_table">
+        <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>학과</th>
+        </tr>
+        <tr>
+            <td>22010</td>
+            <td>고태현</td>
+            <td>컴정</td>
+        </tr>
+        <tr>
+            <td>20002</td>
+            <td>투케이</td>
+            <td id="j이곳">컴퓨터공학과</td>
+        </tr>
+    </table>
+ </body>
+</html>
